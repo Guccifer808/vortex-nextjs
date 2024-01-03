@@ -1,38 +1,82 @@
 :root {
-    /* variables */
-    --bg-dark: #0f141d;
-    --bg-dark-100: #1c2331;
-    --bg-light: #f8f8f8;
-    --text-dark: #0f141d;
-    --text-light: #f8f8f8;
-    --text-light-900: #ddd8d8;
+  /* variables */
+  --bg-dark: #0f141d;
+  --bg-dark-100: #1c2331;
+  --bg-light: #f8f8f8;
+  --bg-light-100: #f2f2f2;
+  --text-dark: #0f141d;
+  --text-light: #f8f8f8;
+  --text-light-900: #ddd8d8;
 
-    --btn-clr: #2563EB;
+  --btn-clr: #2563eb;
+
+  --px10: 0.625rem;
+  --px100: 6.25rem;
+  --px20: 1.25rem;
 }
 
 * {
-    /* reset */
-    margin: 0;
-    padding: 9;
-    box-sizing: border-box;
+  /* reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--bg-light);
-    color:var(--text-dark)
+  background-color: var(--bg-light);
+  color: var(--text-dark);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-margin: auto;
-padding: 0 2.5rem;
-width: 1536px;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 2.5rem;
+  width: 1536px;
+  min-height: 100vh;
+}
+
+/* resposive container */
+@media (max-width: 1536px) {
+  .container {
+    width: 1366px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+    padding: 0 var(--px20);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 475px;
+    padding: 0 var(--px20);
+  }
 }

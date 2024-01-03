@@ -1,5 +1,65 @@
 .links {
+  display: flex;
+  align-items: center;
+  gap: var(--px10);
+}
+
+.logoutBtn {
+  cursor: pointer;
+  padding: var(--px10);
+  border-radius: 0.375rem;
+  border: none;
+  background-color: var(--btn-clr);
+  color: var(--text-light);
+  font-weight: 500;
+  padding: var(--px10);
+  border: 1px solid var(--btn-clr);
+}
+
+.logoutBtn:hover {
+  background-color: var(--bg-dark);
+  transition: all 0.1s ease-in-out;
+  border: 1px solid var(--bg-dark);
+}
+
+.menuBtn,
+.mobLinks {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .links {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobLinks {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    background-color: var(--bg-light);
+    position: absolute;
+    top: var(--px100);
+    right: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.625rem;
+    justify-content: center;
+    gap: var(--px10);
+    overflow: hidden;
+    width: 50%;
+    height: calc(100vh - var(--px100));
+    font-size: 1.125rem;
+    pointer-events: none;
+  }
+
+  .mobLinksVisible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
 }
