@@ -18,8 +18,8 @@
 }
 
 body {
-    background-color: var(--bg-dark);
-    color:var(--text-light)
+    background-color: var(--bg-light);
+    color:var(--text-dark)
 }
 
 a {

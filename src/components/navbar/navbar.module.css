@@ -1,0 +1,12 @@
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 6.25rem;
+}
+
+.logo {
+width: 8rem;
+max-width: 100%;
+height: auto;
+}

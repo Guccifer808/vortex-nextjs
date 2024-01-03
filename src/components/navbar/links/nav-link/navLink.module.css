@@ -1,0 +1,13 @@
+.container {
+    padding: 0.625rem;
+    min-width: 6.25rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.active {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    transition: all 1s ease-in-out;
+}

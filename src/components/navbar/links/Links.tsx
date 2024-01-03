@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import styles from './links.module.css';
+import NavLink from './nav-link/NavLink';
+import { LinkType } from '@/types/linkTypes';
 
-type Props = {};
-
-const Links = (props: Props) => {
-  const linksArray = [
+const Links = () => {
+  const linksArray: LinkType[] = [
     {
       title: 'Homepage',
       path: '/',
@@ -22,11 +22,9 @@ const Links = (props: Props) => {
     },
   ];
   return (
-    <div>
+    <div className={styles.links}>
       {linksArray.map((link) => (
-        <Link href={link.path} key={link.title}>
-          {link.title}
-        </Link>
+        <NavLink link={link} key={link.title} />
       ))}
     </div>
   );
