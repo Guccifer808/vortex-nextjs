@@ -2,6 +2,8 @@ import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import type { Metadata } from 'next';
 
+import './globals.css';
+
 export const metadata: Metadata = {
   title: 'Vortex',
   description: 'Digital Agency',
@@ -15,11 +17,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <Navbar />
+        <div className='container'>
+          <Navbar />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
