@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--px20);
+  margin-bottom: var(--px20);
+}
+
+.topContainer {
+  display: flex;
+}
+
+.imgContainer {
+  position: relative;
+  width: 90%;
+  height: 400px;
+}
+.img {
+  object-fit: cover;
+}
+
+.postCardDate {
+  transform: rotate(270deg);
+  font-size: var(--fontSizeSm);
+}

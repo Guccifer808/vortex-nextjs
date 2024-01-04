@@ -8,7 +8,7 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <section className={styles.container}>
+    <main className={styles.container}>
       <div className={styles.leftContainer}>
         <h2 className={styles.subTitle}>Empowering Digital Excellence</h2>
         <h1 className={styles.title}>
@@ -50,7 +50,7 @@ const About = (props: Props) => {
           className={styles.aboutImg}
         ></Image>
       </div>
-    </section>
+    </main>
   );
 };
 

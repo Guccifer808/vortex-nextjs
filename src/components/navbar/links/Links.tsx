@@ -33,9 +33,7 @@ const Links = () => {
         Menu
       </button>
       {open && (
-        <div
-          className={`${styles.mobLinks} ${open ? styles.mobLinksVisible : ''}`}
-        >
+        <div className={styles.mobLinks}>
           {linksArray.map((link) => (
             <NavLink link={link} key={link.title} />
           ))}

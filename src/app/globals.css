@@ -48,6 +48,7 @@ a {
   padding: 0 2.5rem;
   width: 1536px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* resposive container */
@@ -86,5 +87,10 @@ a {
   .container {
     width: 475px;
     padding: 0 var(--px20);
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    width: 380px;
   }
 }
