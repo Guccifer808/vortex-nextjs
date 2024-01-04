@@ -33,7 +33,6 @@ const Links = () => {
         Menu
       </button>
       {open && (
-        // <div className={styles.mobLinks}>
         <div
           className={`${styles.mobLinks} ${open ? styles.mobLinksVisible : ''}`}
         >

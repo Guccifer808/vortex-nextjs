@@ -42,6 +42,7 @@
     transform: translateX(100%);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     background-color: var(--bg-light);
+    z-index: 999;
     position: absolute;
     top: var(--px100);
     right: 0;
