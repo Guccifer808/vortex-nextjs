@@ -21,4 +21,29 @@
 .postCardDate {
   transform: rotate(270deg);
   font-size: var(--fontSizeSm);
+  margin: auto;
+}
+
+.title {
+  width: 90%;
+  font-size: var(--fontSizeMd);
+  margin-bottom: var(--px20);
+}
+.description {
+  width: 90%;
+  margin-bottom: var(--px20);
+  color: var(--bg-dark-100);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--borderR);
+  padding: var(--px20);
+  min-width: 125px;
+  font-weight: 600;
+}
+.btn:hover {
+  box-shadow: 8px 8px var(--btn-accent);
+  transition: 0.3s;
 }

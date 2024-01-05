@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  gap: var(--px10);
+}
+
+.leftContainer {
+  flex: 1;
+  position: relative;
+  height: calc(100vh - 200px);
+  display: flex;
+  justify-content: center;
+}
+
+.rightContainer {
+  flex: 2;
+  flex-direction: column;
+  gap: var(--pHeadings);
+}
+
+.title {
+  font-size: var(--fontSizeXl);
+  margin-bottom: var(--pHeadings);
+}
+
+.userInfo {
+  display: flex;
+  gap: var(--pHeadings);
+  margin-bottom: var(--pHeadings);
+}
+
+.userImg {
+  object-fit: cover;
+  border-radius: 50%;
+  gap: var(--px10);
+}
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--px10);
+}
+
+.infoTitle {
+  font-weight: bold;
+}
+.infoValue {
+  font-weight: 500;
+}
+.postContent {
+  font-size: var(--fontSizeMd);
+}

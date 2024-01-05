@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import styles from './postCard.module.css';
 
-import postImg from '../../../public/static/techny-test.png';
+import postImg from '/public/static/techny-test.png';
 
 type Props = {};
 
@@ -24,7 +24,9 @@ const PostCard = (props: Props) => {
       <div className={styles.bottomContainer}>
         <h1 className={styles.title}>Title</h1>
         <p className={styles.description}>Description</p>
-        <Link href='/blog/post'>Read More</Link>
+        <Link href='/blog/post'>
+          <button className={styles.btn}>Read More</button>
+        </Link>
       </div>
     </section>
   );
