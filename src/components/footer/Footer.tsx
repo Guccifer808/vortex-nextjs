@@ -18,7 +18,11 @@ const Footer = (props: Props) => {
       </div>
       <div className={styles.copyright}>
         {getYear()} &copy; Made with ❤️ by{' '}
-        <Link href='https://guccifer.site/' target='_blank'>
+        <Link
+          href='https://guccifer.site/'
+          target='_blank'
+          className={styles.name}
+        >
           Guccifer
         </Link>
       </div>

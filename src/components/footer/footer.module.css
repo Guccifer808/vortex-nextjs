@@ -12,3 +12,15 @@
 .copyright {
   font-size: var(--fontSizeXSm);
 }
+
+.name {
+  text-decoration: underline var(--btn-clr) 2px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-top: var(--px20);
+    gap: var(--px20);
+  }
+}

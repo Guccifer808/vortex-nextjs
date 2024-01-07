@@ -49,3 +49,14 @@
   box-shadow: 8px 8px var(--btn-accent);
   transition: 0.3s;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: var(--px20);
+  }
+  .contactImg {
+    height: 250px;
+    width: 250px;
+  }
+}

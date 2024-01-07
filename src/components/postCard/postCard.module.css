@@ -15,7 +15,7 @@
   height: 400px;
 }
 .img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .postCardDate {

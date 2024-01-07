@@ -8,10 +8,19 @@ export default function Home() {
     <main className={styles.container}>
       <div className={styles.leftContainer}>
         <h2 className={styles.subTitle}>Elevating Digital Experiences</h2>
+        <div className={styles.mobileImage}>
+          <Image
+            src={heroAnimated}
+            alt='about vortex web development'
+            width={500}
+            height={450}
+            className={styles.mobileImage}
+          />
+        </div>
         <h1 className={styles.title}>Web development solutions</h1>
         <p className={styles.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          <br /> Dolore velit nobis exercitationem provident ipsum minus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore velit
+          nobis exercitationem provident ipsum minus.
         </p>
         <div className={styles.btnGroup}>
           <button className={styles.btn}>Learn More</button>
@@ -21,28 +30,28 @@ export default function Home() {
           <Image
             src='/logos/kt-logo.png'
             alt='logos cloud'
-            width={120}
+            width={90}
             height={75}
             className={styles.logo}
           ></Image>
           <Image
             src='/logos/logo1.png'
             alt='logos cloud'
-            width={120}
+            width={90}
             height={75}
             className={styles.logo}
           ></Image>
           <Image
             src='/logo2.png'
             alt='logos cloud'
-            width={120}
+            width={90}
             height={75}
             className={styles.logo}
           ></Image>
           <Image
             src='/logo3.png'
             alt='logos cloud'
-            width={120}
+            width={90}
             height={75}
             className={styles.logo}
           ></Image>
@@ -52,7 +61,6 @@ export default function Home() {
         <Image
           src={heroAnimated}
           alt='hero web development'
-          // fill
           width={500}
           height={450}
           className={styles.heroImg}

@@ -11,10 +11,16 @@ const About = (props: Props) => {
     <main className={styles.container}>
       <div className={styles.leftContainer}>
         <h2 className={styles.subTitle}>Empowering Digital Excellence</h2>
-        <h1 className={styles.title}>
-          Crafting Bespoke Web Solutions
-          <br /> to Redefine Your Online Presence
-        </h1>
+        <div className={styles.mobileImage}>
+          <Image
+            src={aboutAnimated}
+            alt='about vortex web development'
+            width={500}
+            height={450}
+            className={styles.mobileImage}
+          />
+        </div>
+        <h1 className={styles.title}>Crafting Bespoke Web Solutions</h1>
         <p className={styles.description}>
           At <span className={styles.span}>Vortex</span>, we fuse creativity
           with cutting-edge technology <br />
@@ -45,8 +51,8 @@ const About = (props: Props) => {
         <Image
           src={aboutAnimated}
           alt='about vortex web development'
-          width={500}
-          height={450}
+          // width={500}
+          // height={450}
           className={styles.aboutImg}
         ></Image>
       </div>

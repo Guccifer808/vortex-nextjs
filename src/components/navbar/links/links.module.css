@@ -35,12 +35,13 @@
   .menuBtn {
     display: block;
     cursor: pointer;
+    outline: none;
   }
 
   .mobLinks {
     background-color: var(--bg-light);
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: var(--px100);
     right: 0;
     display: flex;
@@ -48,9 +49,9 @@
     align-items: center;
     justify-content: center;
     gap: var(--px10);
-    overflow: hidden;
-    width: 50%;
-    height: calc(100vh - var(--px100));
+    width: 100%;
+    height: calc(100dvh - var(--px100));
+
     font-size: 1.125rem;
     pointer-events: none;
   }

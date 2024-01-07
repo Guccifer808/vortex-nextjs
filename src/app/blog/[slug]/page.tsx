@@ -37,8 +37,10 @@ const SinglePostPage = (props: Props) => {
           </div>
         </div>
         <section className={styles.postContent}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-          deleniti, placeat voluptatem recusandae ex eum?
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
+            deleniti, placeat voluptatem recusandae ex eum?
+          </p>
         </section>
       </div>
     </main>

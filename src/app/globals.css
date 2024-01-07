@@ -18,18 +18,34 @@
   --pHeadings: 2.5rem;
 
   --fontSizeXl: 2.875rem;
-  --fontSizeMd: 1rem;
+  --fontSizeMd: 1.5rem;
   --fontSizeSm: 1rem;
   --fontSizeXSm: 0.875rem;
 
   --borderR: 0.375rem;
 }
 
+/* reset */
+/* check this 
+
+https://youtu.be/cCAtD_BAHNw
+
+*/
 * {
-  /* reset */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
 }
 
 body {
@@ -49,7 +65,7 @@ a {
   margin: auto;
   padding: 0 2.5rem;
   width: 1536px;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
 }
 

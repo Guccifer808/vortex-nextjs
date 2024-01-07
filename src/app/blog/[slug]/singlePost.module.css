@@ -6,7 +6,7 @@
 .leftContainer {
   flex: 1;
   position: relative;
-  height: calc(100vh - 200px);
+  height: calc(100dvh - 200px);
   display: flex;
   justify-content: center;
 }
@@ -48,4 +48,13 @@
 }
 .postContent {
   font-size: var(--fontSizeMd);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+@media (max-width: 768px) {
+  .leftContainer {
+    display: none;
+  }
 }
