@@ -9,12 +9,6 @@ const Blog = (props: Props) => {
       <div className={styles.postContainer}>
         <PostCard />
       </div>
-      <div className={styles.postContainer}>
-        <PostCard />
-      </div>
-      <div className={styles.postContainer}>
-        <PostCard />
-      </div>
     </main>
   );
 };

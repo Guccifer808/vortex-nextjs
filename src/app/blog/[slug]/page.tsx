@@ -4,6 +4,7 @@ import styles from './singlePost.module.css';
 
 import postImg from '/public/static/techny-test.png';
 import avatarImg from '/public/static/techny-rocket.png';
+import PostUser from '@/components/postUser/PostUser';
 
 type Props = {};
 
@@ -27,10 +28,7 @@ const SinglePostPage = (props: Props) => {
             width={50}
             height={50}
           />
-          <div className={styles.infoText}>
-            <span className={styles.infoTitle}>Author</span>
-            <span className={styles.infoValue}>Name</span>
-          </div>
+          <PostUser />
           <div className={styles.infoText}>
             <span className={styles.infoTitle}>Published</span>
             <span className={styles.infoValue}>Date</span>

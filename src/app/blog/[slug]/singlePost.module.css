@@ -34,20 +34,8 @@
   gap: var(--px10);
 }
 
-.infoText {
-  display: flex;
-  flex-direction: column;
-  gap: var(--px10);
-}
-
-.infoTitle {
-  font-weight: bold;
-}
-.infoValue {
-  font-weight: 500;
-}
 .postContent {
-  font-size: var(--fontSizeMd);
+  font-size: var(--fontSizeSm);
   /* display: flex;
   justify-content: center;
   align-items: center; */
