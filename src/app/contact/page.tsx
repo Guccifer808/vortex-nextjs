@@ -1,7 +1,8 @@
-import styles from './contact.module.scss';
+import Image from 'next/image';
+
+import styles from './contact.module.css';
 
 import contactAnimated from '../../../public/animated/techny-contact.gif';
-import Image from 'next/image';
 
 type Props = {};
 
