@@ -5,19 +5,25 @@ import styles from './singlePost.module.css';
 import postImg from '/public/static/techny-test.png';
 import avatarImg from '/public/static/techny-rocket.png';
 import PostUser from '@/components/postUser/PostUser';
+import { getPosts } from '@/lib/data';
+import { Posts } from '@/types/postTypes';
 
-type Props = {};
+const SinglePostPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
 
-const SinglePostPage = (props: Props) => {
+  const post: any = await getPosts(slug);
+
   return (
     <main className={styles.container}>
-      <div className={styles.leftContainer}>
-        <Image
-          src={postImg}
-          alt='post vortex web development agency'
-          className={styles.img}
-        />
-      </div>
+      {post.img && (
+        <div className={styles.leftContainer}>
+          <Image
+            src={postImg}
+            alt='post vortex web development agency'
+            className={styles.img}
+          />
+        </div>
+      )}
       <div className={styles.rightContainer}>
         <h1 className={styles.title}>Title</h1>
         <div className={styles.userInfo}>

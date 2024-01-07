@@ -42,14 +42,14 @@ export default function Home() {
             className={styles.logo}
           ></Image>
           <Image
-            src='/logo2.png'
+            src='/logos/logo2.png'
             alt='logos cloud'
             width={90}
             height={75}
             className={styles.logo}
           ></Image>
           <Image
-            src='/logo3.png'
+            src='/logos/logo3.png'
             alt='logos cloud'
             width={90}
             height={75}
