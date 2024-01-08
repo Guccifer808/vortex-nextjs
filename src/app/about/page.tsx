@@ -1,10 +1,17 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
-
-import styles from './about.module.css';
 
 import aboutAnimated from '../../../public/animated/techny-stock.gif';
 
+import styles from './about.module.css';
+
 type Props = {};
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Explore insightful articles and updates on web development trends, technologies, and best practices on the Vortex Web Development blog. Stay informed and engaged with our comprehensive and informative content.',
+};
 
 const About = (props: Props) => {
   return (

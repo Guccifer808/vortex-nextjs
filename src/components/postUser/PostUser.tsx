@@ -1,12 +1,28 @@
+import { getUserById } from '@/lib/data';
 import styles from './postuser.module.css';
+import Image from 'next/image';
+import { User } from '@/types/userTypes';
+import userIcon from '@/public/images/user.png';
 
-type Props = {};
+type Props = {
+  userId: string;
+};
 
-const PostUser = (props: Props) => {
+const PostUser = async ({ userId }: Props) => {
+  const user: User = await getUserById(userId);
+
   return (
     <section className={styles.container}>
-      <span className={styles.infoTitle}>Author</span>
-      <span className={styles.infoValue}>Name</span>
+      <Image
+        alt='user avatar'
+        src={user.avatar ? user.avatar : userIcon}
+        width={50}
+        height={50}
+      />
+      <div className={styles.userInfo}>
+        <span className={styles.infoTitle}>Author</span>
+        <span className={styles.infoValue}>{user.username}</span>
+      </div>
     </section>
   );
 };

@@ -14,6 +14,7 @@
   width: 90%;
   height: 400px;
 }
+
 .img {
   object-fit: contain;
 }
@@ -22,6 +23,7 @@
   transform: rotate(270deg);
   font-size: var(--fontSizeSm);
   margin: auto;
+  white-space: nowrap;
 }
 
 .title {

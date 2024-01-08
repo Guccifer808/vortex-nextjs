@@ -7,8 +7,12 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Vortex',
-  description: 'Digital Agency',
+  title: {
+    default: 'Vortex Web Development',
+    template: '%s | Vortex',
+  },
+  description:
+    'Discover excellence in web development with Vortex. We craft innovative and scalable solutions, ensuring your online presence stands out. From design to deployment, trust Vortex for cutting-edge web development services tailored to your needs.',
 };
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <div className='container'>
           <Navbar />
 

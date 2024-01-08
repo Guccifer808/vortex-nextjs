@@ -1,21 +1,20 @@
 import Image from 'next/image';
+import PostUser from '@/components/postUser/PostUser';
+import { getPost } from '@/lib/data';
+import { Post } from '@/types/postTypes';
+import { Suspense } from 'react';
+
+import postImg from '/public/static/techny-test.png';
 
 import styles from './singlePost.module.css';
 
-import postImg from '/public/static/techny-test.png';
-import avatarImg from '/public/static/techny-rocket.png';
-import PostUser from '@/components/postUser/PostUser';
-import { getPosts } from '@/lib/data';
-import { Posts } from '@/types/postTypes';
-
 const SinglePostPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-
-  const post: any = await getPosts(slug);
+  const post: Post = await getPost(slug);
 
   return (
     <main className={styles.container}>
-      {post.img && (
+      {post?.img && (
         <div className={styles.leftContainer}>
           <Image
             src={postImg}
@@ -25,19 +24,18 @@ const SinglePostPage = async ({ params }: { params: { slug: string } }) => {
         </div>
       )}
       <div className={styles.rightContainer}>
-        <h1 className={styles.title}>Title</h1>
+        <h1 className={styles.title}>{post?.title}</h1>
         <div className={styles.userInfo}>
-          <Image
-            src={avatarImg}
-            alt='post user avatar'
-            className={styles.userImg}
-            width={50}
-            height={50}
-          />
-          <PostUser />
+          {post && (
+            <Suspense fallback={<div>Loading</div>}>
+              <PostUser userId={post.userId} />
+            </Suspense>
+          )}
           <div className={styles.infoText}>
             <span className={styles.infoTitle}>Published</span>
-            <span className={styles.infoValue}>Date</span>
+            <span className={styles.infoValue}>
+              {post?.createdAt.toString().slice(0, 16)}
+            </span>
           </div>
         </div>
         <section className={styles.postContent}>

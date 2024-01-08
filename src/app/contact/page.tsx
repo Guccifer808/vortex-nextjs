@@ -1,10 +1,17 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 import styles from './contact.module.css';
 
 import contactAnimated from '../../../public/animated/techny-contact.gif';
 
 type Props = {};
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description:
+    'Get in touch with Vortex. Contact our team for inquiries, collaborations, or any assistance regarding our services. Reach out today and start building something great together.',
+};
 
 const Contact = (props: Props) => {
   return (

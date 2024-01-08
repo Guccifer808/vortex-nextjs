@@ -1,11 +1,11 @@
 export type Post = {
-  post: {
-    username: string;
-    title: string;
-    description: string;
-    img?: string;
-    slug: string;
-  };
+  title: string;
+  description: string;
+  userId: string;
+  img: string;
+  slug: string;
+  _id: any;
+  createdAt: Date;
 };
 
 export type Posts = Post[];

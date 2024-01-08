@@ -1,30 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Post } from '@/types/postTypes';
 
 import styles from './postCard.module.css';
 
-import { Post } from '@/types/postTypes';
-
-const PostCard = ({ post }: Post) => {
+const PostCard = (posts: Post) => {
   return (
     <section className={styles.container}>
       <div className={styles.topContainer}>
-        {post.img && (
+        {posts?.img && (
           <div className={styles.imgContainer}>
             <Image
-              src={post.img as string}
+              src={posts?.img as string}
               alt='blog posts images for vortex web development agency'
               className={styles.img}
               fill
             />
           </div>
         )}
-        <span className={styles.postCardDate}>Date</span>
+        <span className={styles.postCardDate}>
+          {posts?.createdAt.toString().slice(4, 16)}
+        </span>
       </div>
       <div className={styles.bottomContainer}>
-        <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.description}>{post.description}</p>
-        <Link href={`/blog/post/${post.slug}`}>
+        <h1 className={styles.title}>{posts?.title}</h1>
+        <p className={styles.description}>{posts?.description}</p>
+        <Link href={`/blog/post/${posts?.slug}`}>
           <button className={styles.btn}>Read More</button>
         </Link>
       </div>

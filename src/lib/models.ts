@@ -53,7 +53,7 @@ const userSchema = new mongoose.Schema(
       required: true,
       mix: 8,
     },
-    img: {
+    avatar: {
       type: String,
     },
     isAdmin: {
