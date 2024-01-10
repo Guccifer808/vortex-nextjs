@@ -2,7 +2,7 @@ import { getUserById } from '@/lib/data';
 import styles from './postuser.module.css';
 import Image from 'next/image';
 import { User } from '@/types/userTypes';
-import userIcon from '@/public/images/user.png';
+import userIcon from '/public/static/user.png';
 
 type Props = {
   userId: string;
@@ -16,8 +16,8 @@ const PostUser = async ({ userId }: Props) => {
       <Image
         alt='user avatar'
         src={user.avatar ? user.avatar : userIcon}
-        width={50}
-        height={50}
+        width={35}
+        height={35}
       />
       <div className={styles.userInfo}>
         <span className={styles.infoTitle}>Author</span>

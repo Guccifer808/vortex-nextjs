@@ -34,7 +34,6 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  filter: grayscale(10%);
 }
 
 .logo {
@@ -113,6 +112,11 @@
     position: relative;
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: contain;
+  }
+  .logosGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

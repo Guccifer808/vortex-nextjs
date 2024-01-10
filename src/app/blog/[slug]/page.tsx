@@ -4,22 +4,20 @@ import { getPost } from '@/lib/data';
 import { Post } from '@/types/postTypes';
 import { Suspense } from 'react';
 
-import postImg from '/public/static/techny-test.png';
-
 import styles from './singlePost.module.css';
 
 const SinglePostPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
   const post: Post = await getPost(slug);
-
   return (
     <main className={styles.container}>
       {post?.img && (
         <div className={styles.leftContainer}>
           <Image
-            src={postImg}
+            src={post?.img}
             alt='post vortex web development agency'
             className={styles.img}
+            fill
           />
         </div>
       )}

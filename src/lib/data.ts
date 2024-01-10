@@ -20,7 +20,7 @@ export const getPosts = async (): Promise<ApiResponsePosts[]> => {
 export const getPost = async (slug: string): Promise<ApiResponsePosts> => {
   try {
     connectToDb();
-    const post = await Post.findOne({ slug });
+    const post = await Post.findOne({ slug }).lean();
     return post as ApiResponsePosts;
   } catch (error) {
     throw new Error('Error fetching posts');

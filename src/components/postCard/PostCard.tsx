@@ -25,7 +25,7 @@ const PostCard = (posts: Post) => {
       <div className={styles.bottomContainer}>
         <h1 className={styles.title}>{posts?.title}</h1>
         <p className={styles.description}>{posts?.description}</p>
-        <Link href={`/blog/post/${posts?.slug}`}>
+        <Link href={`/blog/${posts.slug}`}>
           <button className={styles.btn}>Read More</button>
         </Link>
       </div>

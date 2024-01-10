@@ -53,6 +53,5 @@
     height: calc(100dvh - var(--px100));
 
     font-size: 1.125rem;
-    pointer-events: none;
   }
 }
