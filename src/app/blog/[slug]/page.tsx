@@ -5,10 +5,33 @@ import { Post } from '@/types/postTypes';
 import { Suspense } from 'react';
 
 import styles from './singlePost.module.css';
+import { Params } from '@/types/types';
 
-const SinglePostPage = async ({ params }: { params: { slug: string } }) => {
+export const generateMetadata = async ({ params }: { params: Params }) => {
   const { slug } = params;
   const post: Post = await getPost(slug);
+  return {
+    title: post?.title,
+    description: post?.description,
+  };
+};
+
+const getData = async (slug: string) => {
+  const res = await fetch(`${process.env.API_URL}/blog/${slug}`);
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch posts');
+  }
+
+  return res.json();
+};
+
+const SinglePostPage = async ({ params }: { params: Params }) => {
+  const { slug } = params;
+  const post: Post = await getPost(slug);
+
+  console.log(post);
+
   return (
     <main className={styles.container}>
       {post?.img && (
